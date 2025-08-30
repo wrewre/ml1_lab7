@@ -231,5 +231,6 @@ print("Model Ranking by Test Accuracy:")
 print("=" * 60)
 sorted_models = sorted(results['comparison_summary'].items(), key=lambda x: x[1]['test_accuracy'], reverse=True)
 for i, (model, metrics) in enumerate(sorted_models, 1):
-    print(str(i) + ".", model, "| Test Accuracy:", round(metrics['test_accuracy'], 4), "| CV Score:", round(metrics['cv_score'], 4), "| Time:", round(metrics['time'], 2), "s")
+    print(str(i) + ".", model, "| Test Accuracy:", metrics['test_accuracy'], 4, "| CV Score:", metrics['cv_score'], 4, "| Time:", metrics['time'], 2, "s")
+
 
